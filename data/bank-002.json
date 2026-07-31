@@ -403,15 +403,15 @@
       "cat": 2,
       "sub": "클라우드특징",
       "type": "mc",
-      "q": "클라우드 컴퓨팅 특성 중 사용한 만큼만 비용을 지불하고 사용량이 측정되는 것을 의미하는 것은?",
+      "q": "클라우드 컴퓨팅 특성 중 사용한 만큼만 비용을 지불하고 사용량이 자동으로 측정·과금되는 것을 의미하는 것은?",
       "opts": [
-        "On-demand self-service",
-        "Resource Pooling",
-        "Rapid Elasticity",
-        "Measured Service"
+        "Measured Service",
+        "Community Cloud",
+        "Elastic Load Balancing",
+        "Multi-Tenancy"
       ],
-      "ans": 3,
-      "exp": "Measured Service는 사용량을 측정하여 그에 따라 과금하는 클라우드의 특성이다.",
+      "ans": 0,
+      "exp": "Measured Service는 사용량을 자동으로 측정하여 그에 따라 과금하는 클라우드의 특성이다.",
       "diff": 2
     },
     {
