@@ -423,7 +423,7 @@ function rHome() {
   $('#s-home').innerHTML = `
   ${isDemo() ? `<div class="notice"><b>데모 문항 ${items.length}개</b>로 돌아가는 중이야. 저장소 <code>data/</code>에 실제 문제은행을 올리면 데모는 자동으로 사라져.</div>` : ''}
   <div class="card">
-    <div class="lbl">${C}회독 진도</div>
+    <div class="lbl" style="font-size:15px">${C}회독 진도</div>
     <div style="display:flex;align-items:flex-end;gap:10px">
       <div class="big">${doneThis}</div><div class="muted" style="padding-bottom:5px">/ ${items.length} 문항</div>
     </div>
@@ -460,7 +460,7 @@ function rHome() {
     ${byCat.map(b => `<div class="stat" style="display:block">
       <div style="display:flex;justify-content:space-between;gap:10px">
         <span style="font-size:14.5px;font-weight:600">${b.s.id}. ${esc(b.s.short)}
-          <span class="muted" style="font-size:11.5px;font-weight:400">${b.n}문항 (정원 ${b.s.n})</span></span>
+          <span class="muted" style="font-size:11.5px;font-weight:400">${b.n}문항</span></span>
         <b style="color:${b.rate === null ? 'var(--ink3)' : b.rate >= 75 ? 'var(--ok)' : b.rate >= 60 ? 'var(--t3)' : 'var(--no)'}">${b.rate === null ? '—' : b.rate + '%'}</b>
       </div>
       <div class="bar thin"><i style="width:${b.n ? b.cyc / b.n * 100 : 0}%"></i></div>
@@ -744,7 +744,7 @@ function rData() {
     <div class="stat"><span>용어</span><b>${DB.gloss.length}</b></div>
     <div class="stat"><span>개념 문서</span><b>${DB.notes.length}</b></div>
     <hr>
-    ${SUBJECTS.map(s => `<div class="stat"><span>${s.id}. ${esc(s.short)}</span><b>${items.filter(i => catOf(i) === s.id).length} / ${s.n}</b></div>`).join('')}
+    ${SUBJECTS.map(s => `<div class="stat"><span>${s.id}. ${esc(s.short)}</span><b>${items.filter(i => catOf(i) === s.id).length}</b></div>`).join('')}
     <div style="margin-top:14px"><button class="btn ghost sm" id="sync">콘텐츠 새로 받기</button></div>
     <p class="muted" style="margin:10px 0 0">문항·용어·개념은 저장소 <code>data/</code> 폴더가 원본이야. 앱에서는 수정할 수 없고, 파일이 갱신되면 두 사람 모두 같은 내용을 받게 돼.</p>
   </div>
