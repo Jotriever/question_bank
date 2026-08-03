@@ -68,7 +68,6 @@ hr{border:0;border-top:1px solid var(--line2);margin:14px 0}
 .btn.sm{padding:10px;font-size:14px;min-height:44px;border-radius:9px}
 .btn.danger{background:var(--no)}
 .qno{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.05em;color:var(--t1)}
-.qcat{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--ink3);text-transform:uppercase;text-align:right}
 
 #s-quiz,#s-result{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
 .prog{display:flex;align-items:center;gap:9px;margin-bottom:14px}
@@ -510,7 +509,7 @@ function startTick() {
 }
 function rQuiz() {
   if (!R) return go('home');
-  const it = R.items[R.idx], v = R.ans[it.n], cid = catOf(it);
+  const it = R.items[R.idx], v = R.ans[it.n];
   const answered = Object.values(R.ans).filter(x => x !== undefined && x !== '').length;
   let body;
   if (it.type === 'mc') {
@@ -533,8 +532,7 @@ function rQuiz() {
     <button class="chip sm" id="stop" style="min-height:32px;padding:5px 10px">중단</button>
   </div>
   <div class="card">
-    <div class="qhead"><span class="qno">#${pad(it.n)}</span>
-      <span class="qcat">${esc(catShort(cid))}${it.sub ? '<br>' + esc(it.sub) : ''}</span></div>
+    <div class="qhead"><span class="qno">#${pad(it.n)}</span></div>
     <p class="qtext">${esc(it.q)}</p>
     ${body}
   </div>

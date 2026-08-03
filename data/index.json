@@ -1,6 +1,7 @@
 {
-  "ver": "2026-07-31-05",
+  "ver": "2026-08-04-01",
   "note": "문항/용어/개념을 추가하려면 이 files 배열에 파일명을 넣고 ver 값을 바꿀 것. ver이 바뀌면 두 사람의 앱이 모두 새로 받아간다.",
   "files": ["demo-bank.json","bank-001.json","bank-002.json","bank-003.json",
-  "bank-004.json","bank-005.json","bank-006.json","bank-007.json","bank-008.json","bank-009.json","bank-010.json"]
+  "bank-004.json","bank-005.json","bank-006.json","bank-007.json","bank-008.json","bank-009.json","bank-010.json",
+  "glossary.json"]
 }
