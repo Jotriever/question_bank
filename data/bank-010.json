@@ -1110,18 +1110,18 @@
     {
       "n": 1072,
       "cat": 5,
-      "sub": "A01BrokenAccessControl",
+      "sub": "불충분한인가IDOR개념",
       "type": "mc",
-      "q": "OWASP Top 10(2021) 중 1위에 해당하며 인가되지 않은 자원 접근을 포괄하는 카테고리는?",
+      "q": "객체 참조값(주문번호 등)을 조작해 권한 검증 없이 타인의 리소스에 접근할 수 있는 취약점은?",
       "opts": [
-        "A01: Broken Access Control",
-        "A02: Cryptographic Failures",
-        "A03: Injection",
-        "A07: Identification and Authentication Failures"
+        "불충분한 인가(IDOR)",
+        "CSRF",
+        "SSRF",
+        "데이터 평문 전송"
       ],
       "ans": 0,
-      "exp": "A01은 Broken Access Control로 인가되지 않은 자원 접근 문제를 포괄한다.",
-      "diff": "중"
+      "exp": "객체 참조값 조작을 통한 인가 우회는 불충분한 인가(IDOR)의 전형적인 사례다.",
+      "diff": 2
     },
     {
       "cat": 5,
@@ -1142,18 +1142,18 @@
     {
       "n": 1074,
       "cat": 5,
-      "sub": "A03Injection",
+      "sub": "SQLInjection컬럼확인2",
       "type": "mc",
-      "q": "SQL, OS 명령어, LDAP 등 신뢰할 수 없는 데이터가 인터프리터로 전달되어 실행되는 취약점을 포괄하는 OWASP 카테고리는?",
+      "q": "Union 기반 SQL Injection에서 컬럼 개수를 파악하기 위해 흔히 사용하는 구문은?",
       "opts": [
-        "A04: Insecure Design",
-        "A02: Cryptographic Failures",
-        "A03: Injection",
-        "A09: Security Logging and Monitoring Failures"
+        "ORDER BY n --",
+        "SELECT * FROM users",
+        "DROP TABLE users",
+        "DELETE FROM users"
       ],
-      "ans": 2,
-      "exp": "A03은 Injection으로 SQL·OS 명령어 등 인젝션 취약점을 포괄한다.",
-      "diff": "중"
+      "ans": 0,
+      "exp": "ORDER BY n --를 이용해 에러가 발생하는 시점까지 n을 증가시키면 원본 쿼리의 컬럼 개수를 파악할 수 있다.",
+      "diff": 2
     },
     {
       "cat": 5,
@@ -1238,18 +1238,18 @@
     {
       "n": 1080,
       "cat": 5,
-      "sub": "A10SSRFOWASP",
+      "sub": "SSRF내부자원접근2",
       "type": "mc",
-      "q": "OWASP Top 10(2021)에서 신설되어 서버가 공격자가 지정한 임의 위치로 요청을 보내도록 유도하는 취약점을 별도 카테고리로 다루는 항목은?",
+      "q": "서버의 요청 기능을 악용해 외부에서 접근할 수 없는 내부 자원(설정파일 등)에 접근하는 공격은?",
       "opts": [
-        "A10: Server-Side Request Forgery",
-        "A08: Software and Data Integrity Failures",
-        "A04: Insecure Design",
-        "A06: Vulnerable and Outdated Components"
+        "SSRF",
+        "CSRF",
+        "XSS",
+        "Brute Force Attack"
       ],
       "ans": 0,
-      "exp": "A10은 신설된 Server-Side Request Forgery 카테고리다.",
-      "diff": "중"
+      "exp": "서버의 요청 기능을 악용해 내부 전용 자원에 접근하는 것은 SSRF의 전형적 사례다.",
+      "diff": 2
     },
     {
       "cat": 5,
